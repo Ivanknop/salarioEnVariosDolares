@@ -1,0 +1,22 @@
+body{background-color: #428396;}
+.cuerpo{margin:2em;padding: 1em;}
+.table th{font-size: 1em;}
+.logo{margin-left: 35%;}
+.nav-local {background-color: #1CA1C9;}
+.nav-link {color: black;font-size: 1.2em;}
+.nav-icon{color:black}
+h1,h2{text-align: center;}
+.button-return {margin-left: 50%;}
+.local-form{margin-left: 30%;}
+.local-form label {font-size: 2em;}
+.local-form input {height: 2em;width: 15em;}
+.button-salary{margin-left: 9%}
+
+footer{ 
+    bottom: 100%;
+    width: 100%; 
+    height: 3vw;
+    justify-content: center; 
+}
+footer p, .icon{font-size: 0.8vw; text-align: center;-webkit-text-stroke: black; }
+footer .icon{color: white}

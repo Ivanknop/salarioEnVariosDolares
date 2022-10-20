@@ -1,0 +1,35 @@
+{% include 'header.html' %}
+
+<table class="table bg-info">
+    <tr>
+        <h3>Tu salario: {{data['pesos']}} </h3>
+        <br><br>
+        <h3>¿En cada dolar?</h3>
+    </tr>
+    <tr>
+        <th>Dólar Oficial</th>
+        <th>Dólar Blue</th>
+        <th>Dólar Turista</th>
+    </tr>
+    <tr>
+        <td>{{data['dolaroficial']}}</td>
+        <td>{{data['dolarblue']}}</td>        
+        <td>{{data['dolarturista']}}</td>
+    </tr>
+    <tr>
+        <th>Dólar Bolsa</th>
+        <th>Dólar CCL</th>
+        <th>Dólar Mayorista</th>
+    </tr>
+    <tr>
+        <td>{{data['dolarbolsa']}}</td>
+        <td>{{data['contadoliqui']}}</td>        
+        <td>{{data['mayorista']}}</td>
+    </tr>
+</table>
+<form  method="GET" action="/">
+    <br>
+    <input class="button-return" type="submit" value="VOLVER">
+
+</form>
+{% include 'footer.html' %}
