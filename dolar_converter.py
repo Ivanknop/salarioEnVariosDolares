@@ -1,7 +1,7 @@
 import requests
 import json
 
-class Dolar_convertor():
+class Dolar_converter():
     
     def __init__(self,salary=0):
         self.dolar_today = {'pesos':salary}
