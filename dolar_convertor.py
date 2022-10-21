@@ -5,7 +5,7 @@ class Dolar_convertor():
     
     def __init__(self,salary=0):
         self.dolar_today = {'pesos':salary}
-        self.__add_quotes()
+        self.__set_quotes()
     
     def __new_quote(self,type_of_dolar):
         url = 'https://api-dolar-argentina.herokuapp.com/api/'+type_of_dolar
