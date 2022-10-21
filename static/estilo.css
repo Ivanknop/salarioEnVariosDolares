@@ -1,22 +1,32 @@
+
+*{font-family: 'Kanit', sans-serif;}
 body{background-color: #428396;}
-.cuerpo{margin:2em;padding: 1em;}
-.table th{font-size: 1em;}
+*{margin: 0;padding: 0;}
+.table{margin-left: 25%;width: 50%;text-justify: center;}
+.table th, td{font-size: 1.5em;text-align: center;}
+.table td{color: #ab0b33;font-size: 2em;}
 .logo{margin-left: 35%;}
 .nav-local {background-color: #1CA1C9;}
 .nav-link {color: black;font-size: 1.2em;}
 .nav-icon{color:black}
+
+
+.h2-text {width: 50em;margin: 0 30%;}
+
 h1,h2{text-align: center;}
-.button-return {margin-left: 50%;}
-.local-form{margin-left: 30%;}
+h1{font-size: 4em;}
+.button-return {margin: 0 46%;font-size: 2em;}
+.local-form{margin-left: 35%;}
 .local-form label {font-size: 2em;}
 .local-form input {height: 2em;width: 15em;}
-.button-salary{margin-left: 9%}
+.button-salary{font-size: 1em;}
 
 footer{ 
-    bottom: 100%;
     width: 100%; 
     height: 3vw;
-    justify-content: center; 
+    justify-content: center;
+    position: fixed;
+    bottom: 0;  
 }
 footer p, .icon{font-size: 0.8vw; text-align: center;-webkit-text-stroke: black; }
 footer .icon{color: white}

@@ -1,11 +1,12 @@
 {% include 'header.html' %}
 
 <table class="table bg-info">
-    <tr>
-        <h3>Tu salario: {{data['pesos']}} </h3>
+
+        <h1>Pesos: {{data['pesos']}} </h2>
         <br><br>
-        <h3>¿En cada dolar?</h3>
-    </tr>
+        <div class="h2-text"></div>
+        <h2>¿En cada dolar?</h2>
+    </div>
     <tr>
         <th>Dólar Oficial</th>
         <th>Dólar Blue</th>
@@ -29,7 +30,8 @@
 </table>
 <form  method="GET" action="/">
     <br>
-    <input class="button-return" type="submit" value="VOLVER">
+    <input class="btn-danger button-return" type="submit" value="VOLVER">
 
 </form>
+
 {% include 'footer.html' %}

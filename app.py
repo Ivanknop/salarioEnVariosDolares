@@ -7,7 +7,6 @@ app=Flask(__name__)
 @app.route("/")
 def index():
     dolar_today = Dolar_converter()
-    print (dolar_today.show_quote() )
     return render_template('index.html',data=dolar_today.show_quote())
 
 

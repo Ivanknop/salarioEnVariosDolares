@@ -1,5 +1,6 @@
 {% include 'header.html' %}
 <h1>COTIZACIÓN DEL DOLAR HOY</h1>
+<br><br>
 <table class="table bg-info">
     <tr>
         <th>Dólar Oficial</th>
@@ -23,17 +24,17 @@
     </tr>
 
 </table>
-
-<h2>INGRESÁ TU SALARIO EN PESOS Y AVERIGUÁ CUÁNTO GANAS EN LOS DIFERENTES DÓLARES</h2>
-{% block content %}
+<br><br>
+<div class="h2-text">
+<h2>INGRESÁ TU SALARIO EN PESOS Y AVERIGUÁ CUÁNTO GANÁS EN LOS DIFERENTES DÓLARES</h2> <br><br>     
+</div>
 <div class="local-form">
     <form method="GET" action="/calculate">
         <label for="salary">Salario: </label>
-        <input type="number" id="salary" name="salary" value='0' placeholder="00.00"/><br>
-        <input class="button-salary" type="submit"  button-chose-character value="Calcular" />
+        <input type="number" id="salary" name="salary" value='00.00' placeholder="00.00"/>
+        <input class="btn-danger button-salary" type="submit" value="CALCULAR" />
     </form>
 </div>
-{% endblock %}
 
 {% include 'footer.html' %}
 
