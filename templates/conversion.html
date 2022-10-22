@@ -1,37 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b27b674285.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" type="text/css">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <title>Sueldo en Dolares</title>
+</head>
 {% include 'header.html' %}
-
-<table class="table bg-info">
-
-        <h1>Pesos: {{data['pesos']}} </h2>
-        <br><br>
-        <div class="h2-text"></div>
-        <h2>¿En cada dolar?</h2>
+<div class="container">
+    <div class="row mb-5">
+        <div class="col-12 text-center">
+            <h2 >Pesos: ${{data['pesos']}} </h2>
+            <div class="h2-text"></div>
+            <h2>¿Y en cada dolar?</h2>
+        </div>
     </div>
-    <tr>
-        <th>Dólar Oficial</th>
-        <th>Dólar Blue</th>
-        <th>Dólar Turista</th>
-    </tr>
-    <tr>
-        <td>{{data['dolaroficial']}}</td>
-        <td>{{data['dolarblue']}}</td>        
-        <td>{{data['dolarturista']}}</td>
-    </tr>
-    <tr>
-        <th>Dólar Bolsa</th>
-        <th>Dólar CCL</th>
-        <th>Dólar Mayorista</th>
-    </tr>
-    <tr>
-        <td>{{data['dolarbolsa']}}</td>
-        <td>{{data['contadoliqui']}}</td>        
-        <td>{{data['mayorista']}}</td>
-    </tr>
-</table>
-<form  method="GET" action="/">
-    <br>
-    <input class="btn-danger button-return" type="submit" value="VOLVER">
-
-</form>
-
+    <div class="main-container-cards">
+        <div class="row d-flex justify-content-center">
+            <div class="col-3 main-card">
+                <p>Dólar Oficial</p>
+                <p class="dolar">${{data['dolaroficial']}}</p> 
+            </div>
+            <div class="col-3 main-card">
+                <p>Dólar Blue</p>
+                <p class="dolar">${{data['dolarblue']}}</p>
+            </div>
+            <div class="col-3 main-card">
+                <p>Dólar Turista</p>
+                <p class="dolar">${{data['dolarturista']}}</p>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-3 main-card">
+                <p>Dólar Bolsa</p>
+                <p class="dolar">${{data['dolarbolsa']}}</p>
+            </div>
+            <div class="col-3 main-card">
+                <p>Dólar CCL</p>
+                <p class="dolar">${{data['contadoliqui']}}</p>
+            </div>
+            <div class="col-3 main-card">
+                <p>Dólar Mayorista</p>
+                <p class="dolar">${{data['mayorista']}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-12">
+            <form  method="GET" action="/" class="text-center">
+                <input class="btn-danger button-return" type="submit" value="VOLVER">
+            </form>
+        </div>
+    </div>
+</div>
 {% include 'footer.html' %}
