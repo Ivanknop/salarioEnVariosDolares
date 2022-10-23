@@ -1,41 +1,66 @@
-{% include 'header.html' %}
-<h1>COTIZACIÓN DEL DOLAR HOY</h1>
-<br><br>
-<table class="table bg-info">
-    <tr>
-        <th>Dólar Oficial</th>
-        <th>Dólar Blue</th>
-        <th>Dólar Turista</th>
-    </tr>
-    <tr>
-        <td>{{data['dolaroficial']}}</td>
-        <td>{{data['dolarblue']}}</td>        
-        <td>{{data['dolarturista']}}</td>
-    </tr>
-    <tr>
-        <th>Dólar Bolsa</th>
-        <th>Dólar CCL</th>
-        <th>Dólar Mayorista</th>
-    </tr>
-    <tr>
-        <td>{{data['dolarbolsa']}}</td>
-        <td>{{data['contadoliqui']}}</td>        
-        <td>{{data['mayorista']}}</td>
-    </tr>
-
-</table>
-<br><br>
-<div class="h2-text">
-<h2>INGRESÁ TU SALARIO EN PESOS Y AVERIGUÁ CUÁNTO GANÁS EN LOS DIFERENTES DÓLARES</h2> <br><br>     
-</div>
-<div class="local-form">
-    <form method="GET" action="/calculate">
-        <label for="salary">Salario: </label>
-        <input type="number" id="salary" name="salary" value='00.00' placeholder="00.00"/>
-        <input class="btn-danger button-salary" type="submit" value="CALCULAR" />
-    </form>
-</div>
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b27b674285.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" type="text/css">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <title>Sueldo en Dolares</title>
+</head>
+    {% include 'header.html' %}  
+    <div class="container">
+        <div class="main-container-cards">
+            <div class="row d-flex justify-content-center">
+                <div class="col-3 main-card">
+                    <p class="mt-3">Dólar Oficial</p>
+                    <p class="dolar">${{data['dolaroficial']}}</p> 
+                </div>
+                <div class="col-3 main-card">
+                    <p class="mt-3">Dólar Blue</p>
+                    <p class="dolar">${{data['dolarblue']}}</p>
+                </div>
+                <div class="col-3 main-card">
+                    <p class="mt-3">Dólar Turista</p>
+                    <p class="dolar">${{data['dolarturista']}}</p>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-3 main-card">
+                    <p class="mt-3">Dólar Bolsa</p>
+                    <p class="dolar">${{data['dolarbolsa']}}</p>
+                </div>
+                <div class="col-3 main-card">
+                    <p class="mt-3">Dólar CCL</p>
+                    <p class="dolar">${{data['contadoliqui']}}</p>
+                </div>
+                <div class="col-3 main-card">
+                    <p class="mt-3">Dólar Mayorista</p>
+                    <p class="dolar">${{data['mayorista']}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="main-container-form">
+            <div class="row mb-3">
+                <div class="col-12">
+                    <h4 class="text-center">INGRESÁ TU SALARIO EN PESOS Y AVERIGUÁ CUÁNTO GANÁS EN LOS DIFERENTES DÓLARES</h4> 
+                </div>
+            </div>    
+            <div class="row">
+                <div class="col-12 main-form d-flex justify-content-center">
+                    <form class="d-flex mt-2 justify-content-around w-75 align-items-center flex-wrap" method="GET" action="/calculate">
+                        <label  class="main-salary-label" for="salary">Salario: </label>
+                        <input class="text-center " id="salary" name="salary" value='00.00' placeholder="00.00"/>
+                        <input class="btn-danger button-salary" type="submit" value="CALCULAR" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 {% include 'footer.html' %}
-
-
+</html>

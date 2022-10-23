@@ -24,12 +24,12 @@ class Dolar_converter():
         self.__new_quote('contadoliqui')
     
     def calculate(self):
-        self.dolar_today['dolarblue'] = float(self.dolar_today['pesos']) / self.dolar_today['dolarblue']
-        self.dolar_today['dolaroficial'] = float(self.dolar_today['pesos']) / self.dolar_today['dolaroficial']
-        self.dolar_today['dolarturista'] = float(self.dolar_today['pesos']) / self.dolar_today['dolarturista']
-        self.dolar_today['contadoliqui'] = float(self.dolar_today['pesos']) / self.dolar_today['contadoliqui']
-        self.dolar_today['dolarbolsa'] = float(self.dolar_today['pesos']) / self.dolar_today['dolarbolsa']
-        self.dolar_today['mayorista'] = float(self.dolar_today['pesos']) / self.dolar_today['mayorista']
+        self.dolar_today['dolarblue'] = round(float(self.dolar_today['pesos']) / self.dolar_today['dolarblue'])
+        self.dolar_today['dolaroficial'] = round(float(self.dolar_today['pesos']) / self.dolar_today['dolaroficial'])
+        self.dolar_today['dolarturista'] = round(float(self.dolar_today['pesos']) / self.dolar_today['dolarturista'])
+        self.dolar_today['contadoliqui'] = round(float(self.dolar_today['pesos']) / self.dolar_today['contadoliqui'])
+        self.dolar_today['dolarbolsa'] = round(float(self.dolar_today['pesos']) / self.dolar_today['dolarbolsa'])
+        self.dolar_today['mayorista'] = round(float(self.dolar_today['pesos']) / self.dolar_today['mayorista'])
         return self.dolar_today
 
     def show_quote(self):
