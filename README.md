@@ -4,9 +4,7 @@ El objetivo de esta app es permitir ver tu salario en diferentes valores de dól
 -Dólar Oficial  
 -Dólar Blue  
 -Dólar Turista  
--Dólar Bolsa  
 -Dólar Mayorista  
--Dólar Contado con Liquidación
 
 Se puede ver la cotización de los diferentes dólares  
 ![image](https://user-images.githubusercontent.com/59924602/198068048-f227e95c-db88-40ba-8539-7e54bd1183ea.png)
@@ -19,6 +17,6 @@ Retorna la conversión a los distintos dólares usados
 
 
   
-La información fue extraída de la API https://github.com/Castrogiovanni20/api-dolar-argentina
+La información fue extraída de la API oficial del BCRA, accesible en https://estadisticasbcra.com/api/documentacion
 
 ## [subir](#up)
