@@ -1,6 +1,7 @@
 import traceback
 from flask import Flask,redirect,url_for,render_template,request
 from dolar_converter  import Dolar_converter
+import os
 
 app=Flask(__name__)
 
@@ -19,4 +20,4 @@ def calculate():
 
 
 def run():
-    app.run(host="localhost",port=5000,debug=True,threaded=True)
+    app.run(host=os.getenv("FLASK_HOST","0.0.0.0"),port=5000,debug=True,threaded=True)

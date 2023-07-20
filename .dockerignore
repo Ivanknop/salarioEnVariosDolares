@@ -1,0 +1,5 @@
+__pycache__
+.env
+.gitignore
+.vscode
+README.md
