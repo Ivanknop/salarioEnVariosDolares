@@ -1,6 +1,6 @@
 import requests
 import json
-
+import os
 class Dolar_converter():
     
     def __init__(self,salary=0):
@@ -9,7 +9,7 @@ class Dolar_converter():
     
     def __new_quote(self,type_of_dolar):
         url = 'https://api.estadisticasbcra.com/'+type_of_dolar
-        access_token = "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjA1NTkxNzEsInR5cGUiOiJleHRlcm5hbCIsInVzZXIiOiJpdmFuLmtub3BvZmZAZ21haWwuY29tIn0.03PSad2g2IzjjKJT1nCNGKCy8uk-WJ6EXiIyGxaC9arfGMXrmMsfLdsTFovblhpbcUpOihjr6ZWJldHkjAe_NQ"
+        access_token = os.getenv("TOKEN")
         headers = {"Content-Type":"application/json", "Authorization": f"Bearer {access_token}"}
         response = requests.get(url, headers=headers)
         if response.status_code == 200:
