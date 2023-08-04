@@ -1,0 +1,56 @@
+{% include 'header.html' %}
+<div class="container">
+    <div class="row mb-5">
+        <div class="col-12 text-center">
+            <h2 >Pesos: ${{data['pesos']}} </h2>
+            <div class="h2-text"></div>
+            <h2>Posibles inversiones</h2>
+        </div>
+    </div>
+    <div class="row mb-5">
+        <div class="col-12 text-center">
+            <div class="h2-text"></div>
+            <h2>Inflación Mensual</h2>
+            <h2 >Pesos: ${{data['inflacion']}} </h2>
+        </div>
+    </div>
+    <div class="main-container-cards">
+        <div class="row d-flex justify-content-center">
+            <div class="col-3 main-card">
+                <p>Plazo Fijo</p>
+                <p class="dolar">${{data['plazo_fijo']}}</p> 
+            </div>
+            <div class="col-3 main-card">
+                <p>Dolar MEP</p>
+                <p class="dolar">${{data['mep']}}</p>
+            </div>
+            
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-3 main-card">
+                <p>FI MP</p>
+                <p class="dolar">${{data['mercado_pago']}}</p>
+            </div>
+            <div class="col-3 main-card">
+                <p>FI Naranja X</p>
+                <p class="dolar">${{data['naranja']}}</p>
+            </div>
+           
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-12">
+            <form  method="GET" action="/" class="text-center">
+                <input class="btn-danger button-return" type="submit" value="VOLVER">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% include 'footer.html' %}
+</body>
+</html>

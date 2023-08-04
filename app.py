@@ -19,5 +19,13 @@ def calculate():
     return render_template('conversion.html',data = salary_in_dolars.show_quote())
 
 
+@app.route("/invest",methods=['GET'])
+def posible_invest():
+    amount = request.args.get('amount')
+    invested_amount = Invest(amount)
+    invested_amount = Invest(amount)
+    return render_template('invest.html',data = invested_amount.show_invest())
+
+
 def run():
     app.run(host=os.getenv("FLASK_HOST","0.0.0.0"),port=5000,debug=True,threaded=True)
