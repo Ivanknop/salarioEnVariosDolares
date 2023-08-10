@@ -4,7 +4,7 @@ El objetivo de esta app es permitir ver tu salario en diferentes valores de dól
 -Dólar Oficial  
 -Dólar Blue  
 -Dólar Turista  
--Dólar Mayorista  
+-Dólar Mayorista 
 
 Se puede ver la cotización de los diferentes dólares  
 ![image](https://user-images.githubusercontent.com/59924602/198068048-f227e95c-db88-40ba-8539-7e54bd1183ea.png)
